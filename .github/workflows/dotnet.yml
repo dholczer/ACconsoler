@@ -43,7 +43,7 @@ jobs:
           PACKAGE_NAME: AConsoler
           
           # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
-          # VERSION_FILE_PATH: Directory.Build.props
+          VERSION_FILE_PATH: Directory.Build.props
 
           # Regex pattern to extract version info in a capturing group
           VERSION_REGEX: ^\s*<Version>(.*)<\/Version>\s*$
@@ -64,10 +64,5 @@ jobs:
           NUGET_SOURCE: https://api.nuget.org
 
           # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
-          # INCLUDE_SYMBOLS: false
+          INCLUDE_SYMBOLS: false
       
-      #- name: Publish  
-      #  uses: brandedoutcast/publish-nuget@v2.5.2  
-      #  with:   
-      #    PROJECT_FILE_PATH: AConsoler/Aconsoler.csproj  
-      #    NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
